@@ -37,7 +37,7 @@ class VoorbeeldController(
     }
 
 
-    @PostMapping
+    @PostMapping("/doeIets")
     fun doeIets(@RequestBody request: NaamDto)
     {
         println("Hello, ${request.voornaam} ${request.achternaam}")
