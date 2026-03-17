@@ -1,0 +1,146 @@
+{
+  "info": {
+    "_postman_id": "8ae13c78-77c4-4085-b6df-98675ce4455b",
+    "name": "Topicus Casus",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "38005616"
+  },
+  "item": [
+    {
+      "name": "AllAppointments",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n\"voornaam\": \"Jan\",\r\n\"achternaam\": \"Janssen\"\r\n}\r\n"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/appointment/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "appointment",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "AllOfDay",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/v1/appointment/16-03-2026",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "appointment",
+            "16-03-2026"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "NextAppointment",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Update request",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"date\": \"2026-03-17\",\r\n    \"startTime\": \"20:00:00\",\r\n    \"duration\": 90,\r\n    \"location\": \"Topicus\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/appointment/17:00:00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "appointment",
+            "17:00:00"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Appointment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 0,\r\n    \"date\": \"2026-03-17\",\r\n    \"startTime\": \"18:00:00\",\r\n    \"endTime\": \"00:00:00\",\r\n    \"duration\": 60,\r\n    \"location\": \"Topicus\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/v1/appointment",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "v1",
+            "appointment"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete by ID",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "Get Next Open Moment",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
